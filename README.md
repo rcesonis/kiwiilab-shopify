@@ -1,5 +1,7 @@
 ![Home page](https://raw.githubusercontent.com/rcesonis/kiwiilab-shopify/main/Group%20100.png)
 
+[Kiwiilab](https://kiwiilab-reactjs.myshopify.com/password) was designed, built and deployed by Rimvydas Cesonis as the Codaisseur's Full Stack JavaScript Developer bootcamp portfolio project. The purpose of Kiwiilab online shop is to be the custom built and innovative brand with amazing website. This website is designed to create a beautifully intuitive, smooth and effortless online shopping experience. Specifically aimed at customers who enjoy elegant and beautiful brand experience, high quality products and wish to connect to the personality of the creator behind the products they buy.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
