@@ -16,6 +16,8 @@ const shopProvider = () => {
     isCartOpen: false,
     isMenuOpen: false,
   };
+
+  create Chec
   return <div>shopContext</div>;
 };
 
