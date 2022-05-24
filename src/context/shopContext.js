@@ -37,7 +37,7 @@ class ShopProvider extends Component {
     this.setState({ checkout: checkout });
   };
 
-  fetchCheckout = async (checkout_id) => {
+  fetchCheckout = (checkout_id) => {
     client.checkout.fetch(checkout_id).then((checkout) => {
       this.setState({ checkout: checkout });
     });
@@ -51,7 +51,7 @@ class ShopProvider extends Component {
     // Fetch all products in your shop
     const products = await client.product.fetchAll();
     // Do something with the products
-    this.state.setState({ products: products });
+    this.setState({ products: products });
   };
 
   fetchProductWithHandle = async (handle) => {
@@ -71,7 +71,18 @@ class ShopProvider extends Component {
 
   render() {
     return (
-      <ShopContext.Provider value={0}>
+      <ShopContext.Provider
+        value={{
+          ...this.state,
+          fetchAllProducts: this.fetchAllProducts,
+          fetchProductWithHandle: this.fetchProductWithHandle,
+          addItemtoCheckout: this.addItemtoCheckout,
+          closeCart: this.closeCart,
+          openCart: this.openCart,
+          closeMenu: this.closeMenu,
+          openMenu: this.openMenu,
+        }}
+      >
         {this.props.children}
       </ShopContext.Provider>
     );
