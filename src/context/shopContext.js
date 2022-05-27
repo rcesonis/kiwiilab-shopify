@@ -24,13 +24,6 @@ class ShopProvider extends Component {
     return check;
   }
 
-  // componentDidMount() {
-  //   if (localStorage.checkout_id) {
-  //   } else {
-  //     this.createCheckout();
-  //   }
-  // }
-
   createCheckout = async () => {
     const checkout = await client.checkout.create();
     localStorage.setItem("checkout_id", checkout.id);
@@ -43,9 +36,28 @@ class ShopProvider extends Component {
     });
   };
 
-  addItemtoCheckout = async () => {};
+  addItemToCheckout = async (variantId, quantity) => {
+    const lineItemsToAdd = [
+      {
+        variantId,
+        quantity: parseInt(quantity, 10),
+      },
+    ];
+    const checkout = await client.checkout.addLineItems(
+      this.state.checkout.id,
+      lineItemsToAdd
+    );
+    this.setState({ checkout: checkout });
+    this.openCart();
+  };
 
-  removeLineItem = async (lineItemIdsToRemove) => {};
+  removeLineItem = async (lineItemIdsToRemove) => {
+    const checkout = await client.checkout.removeLineItems(
+      this.state.checkout.id,
+      lineItemIdsToRemove
+    );
+    this.setState({ checkout: checkout });
+  };
 
   fetchAllProducts = async () => {
     // Fetch all products in your shop
@@ -58,16 +70,24 @@ class ShopProvider extends Component {
     // Fetch a single product by Handle
     const product = await client.product.fetchByHandle(handle);
     // Do something with the product
-    this.state.setState({ product: product });
+    this.setState({ product: product });
   };
 
-  // closeCart = () => {};
+  closeCart = () => {
+    this.setState({ isCartOpen: false });
+  };
 
-  // openCart = () => {};
+  openCart = () => {
+    this.setState({ isCartOpen: true });
+  };
 
-  // closeMenu = () => {};
+  closeMenu = () => {
+    this.setState({ isMenuOpen: false });
+  };
 
-  // openMenu = () => {};
+  openMenu = () => {
+    this.setState({ isMenuOpen: true });
+  };
 
   render() {
     return (
@@ -76,9 +96,10 @@ class ShopProvider extends Component {
           ...this.state,
           fetchAllProducts: this.fetchAllProducts,
           fetchProductWithHandle: this.fetchProductWithHandle,
-          addItemtoCheckout: this.addItemtoCheckout,
+          addItemToCheckout: this.addItemToCheckout,
           closeCart: this.closeCart,
           openCart: this.openCart,
+          removeLineItem: this.removeLineItem,
           closeMenu: this.closeMenu,
           openMenu: this.openMenu,
         }}

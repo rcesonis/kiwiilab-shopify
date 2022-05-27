@@ -4,13 +4,19 @@ import "./index.css";
 import App from "./App";
 import ShopProvider from "./context/shopContext";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter as Router } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ShopProvider>
-      <App />
-    </ShopProvider>
+    <ChakraProvider>
+      <ShopProvider>
+        <Router>
+          <App />
+        </Router>
+      </ShopProvider>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
