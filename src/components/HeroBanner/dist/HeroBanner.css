@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  min-height: calc(100vh - 125px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F8F8;
+  margin: 0 auto;
+}
+
+.chakra-container.right {
+  background: url("../../assets/hero-banner-bg.png");
+  max-width: 60vw;
+  height: calc(100vh - 125px);
+}
+
+.chakra-container.left {
+  background-color: #050505;
+  max-width: 60vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: -10vh;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .chakra-container.left {
+    background-color: yellow;
+    max-width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    margin-right: 0;
+  }
+
+  .chakra-container.right {
+    background-color: pink;
+    max-width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+}

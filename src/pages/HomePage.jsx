@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
 import { Box, Grid, Text, Image, Flex } from "@chakra-ui/react";
+import HeroBanner from "../components/HeroBanner/HeroBanner";
 
 const HomePage = () => {
   const { fetchAllProducts, products } = useContext(ShopContext);
@@ -10,11 +11,10 @@ const HomePage = () => {
     fetchAllProducts();
   }, [fetchAllProducts]);
 
-  //   if (!products) return <div>Loading...</div>;
-  //   console.log(products);
   console.log(products);
   return (
     <Box>
+      <HeroBanner />
       <Grid templateColumns="repeat(3, 1fr)">
         {!products ? (
           <div>Loading...</div>
