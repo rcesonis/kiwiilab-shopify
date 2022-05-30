@@ -11,11 +11,11 @@ const HeroBanner = () => {
           <p>
             High quality men grooming products made from natural ingridients
           </p>
-          <Button>Explore our products</Button>
+          <Button backgroundColor="#F03F3F" variant="solid" borderRadius="0">
+            Explore our products
+          </Button>
         </Container>
-        <Container className="right">
-          <p>fewrf</p>
-        </Container>
+        <Container className="right"></Container>
       </Box>
     </section>
   );

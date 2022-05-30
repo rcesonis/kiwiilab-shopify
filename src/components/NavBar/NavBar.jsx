@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { Box, Icon, Image, Flex, Badge } from "@chakra-ui/react";
-import { ShopContext } from "../context/shopContext";
+import { ShopContext } from "../../context/shopContext";
 import { MdMenu, MdShoppingBasket } from "react-icons/md";
-import logo from "../assets/kiwiilab_logo.png";
+import logo from "../../assets/kiwiilab_logo.png";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -24,7 +24,7 @@ const NavBar = () => {
         onClick={() => openMenu()}
       ></Icon>
       <Link to="/">
-        <Image src={logo} />
+        <Image className="logo" src={logo} />
       </Link>
       <Box>
         <Icon
@@ -35,7 +35,7 @@ const NavBar = () => {
           h={30}
           onClick={() => openCart()}
         />
-        <Badge backgroundColor="red" borderRadius="50%">
+        <Badge backgroundColor="red" fontSize={"0.6em"} borderRadius="50%">
           {checkout.lineItems?.length}
         </Badge>
       </Box>
