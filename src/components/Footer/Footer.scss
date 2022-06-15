@@ -1,0 +1,16 @@
+@import "../../styles/global.scss";
+
+.footer {
+    background-color: $main-black;
+}
+
+.footer-links {
+    font-weight: 700;
+    font-size: 1.375rem;
+    color: $main-white;
+}
+
+.copyright-text {
+    color: $main-white;
+    font-size: 0.7rem;
+}

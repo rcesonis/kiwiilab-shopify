@@ -1,1 +1,16 @@
 @import "../../styles/global.scss";
+
+.about-us-component {
+    background-color: black;
+}
+
+.about-us-pics-container {
+    justify-content: center;
+    align-items: center;
+    margin-top: -20%;
+}
+
+.right-about-us-pic {
+    margin-left: -10%;
+    margin-bottom: -40%;
+}

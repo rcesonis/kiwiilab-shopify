@@ -1,0 +1,19 @@
+@import "../../styles/global.scss";
+
+.subscribe-input-field {
+    border-bottom-right-radius: 0!important;
+    border-top-right-radius: 0!important ;
+}
+
+.subscribe-button {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    background-color: $main-red!important;
+    padding-left: 3rem!important;
+    padding-right: 3rem!important;
+    color: $main-white !important;
+}
+
+.css-6m1gab {
+    background-color: $main-white!important;
+}

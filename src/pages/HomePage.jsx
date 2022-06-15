@@ -6,6 +6,7 @@ import { Box } from "@chakra-ui/react";
 import VideoBanner from "../components/VideoBanner/VideoBanner";
 import AboutUsBanner from "../components/AboutUsBanner/AboutUsBanner";
 import SocialMediaGrid from "../components/SocialMediaGrid/SocialMediaGrid";
+import Subscribe from "../components/Subscribe/Subscribe";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <VideoBanner />
       <AboutUsBanner />
       <SocialMediaGrid />
+      <Subscribe />
     </Box>
   );
 };

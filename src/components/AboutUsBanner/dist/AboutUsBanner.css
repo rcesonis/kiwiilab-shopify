@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-us-pics-container {
+  position: relative;
+  background-color: red;
+}
+
+.left-about-us-pic {
+  position: absolute;
+  height: 10vh !important;
+  width: 10vw;
+}
+
+.right-about-us-pic {
+  position: absolute;
+  height: 10vh !important;
+  width: 10vw;
+}
