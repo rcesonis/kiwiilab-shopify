@@ -25,13 +25,15 @@ const Subscribe = () => {
       <Box mx={"auto"}>
         <Box>
           <Heading
-            size={{ base: "1rem", sm: "2rem" }}
+          className="main-heading"
+            as={"h2"}
+            fontSize={{ base: "2rem", sm: "3rem" }}
             textAlign={{
               base: "center",
               sm: "center",
               md: "center",
               lg: "center",
-              xl: "start"
+              xl: "start",
             }}
             color={"#FFFFFF"}
           >
@@ -40,7 +42,12 @@ const Subscribe = () => {
           <Text
             color={"#FFFFFF"}
             fontSize={{ base: "1rem" }}
-            textAlign={{ base: "center", sm: "center", lg: "center", xl: "start" }}
+            textAlign={{
+              base: "center",
+              sm: "center",
+              lg: "center",
+              xl: "start",
+            }}
           >
             Get the best deals at Kiwiilab, get to know upcoming <br></br>
             promotions prior to everyone else.
